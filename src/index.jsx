@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Card } from './components/Card'
+import  { App }  from '../src/components/App'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-<App></App>
+< App/>
 )

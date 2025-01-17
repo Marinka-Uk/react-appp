@@ -1,9 +1,12 @@
-import { Books  }  from "components/Books"
-import { Card  }  from "components/Card"
+import { PaintingList  }  from "../components/PaintingList"
+import { Greeting } from "./Greeting"
+import { Subtittle } from "./Subtittle"
+import data from "../data.json"
 
 export const App =()=>{
     return <>
-    <Card/>
-    <Books/>
+    {/* <PaintingList data = {data}/> */}
+    <Greeting name=' Bob  ' id='5'/>
+    <Subtittle text = ''/>
     </>
 }

@@ -1,10 +1,9 @@
-
-
+import css from './painting.modul.css' 
 
 
 
 export const PaintingList = (props) => {
- return <ul>
+ return <ul className={css.list}>
   {props.data.map((paintCard) => {
   return <li key={paintCard.id}>
     <img src={paintCard.url} alt={paintCard.title} width="480"/>
@@ -21,6 +20,8 @@ export const PaintingList = (props) => {
 
 
 const title = <h1>Hello</h1>
+
+
 
 // const root = ReactDOM.createRoot(document.getElementById('root'))
 // root.render(card)

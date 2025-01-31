@@ -1,9 +1,9 @@
 import css from './ColourPicker.module.css'
+import PropTypes from 'prop-types';
 
-
-export const ColourPicker = (props)=>{
+export const ColourPicker = ({options})=>{
 return <ul className={css.list}>
-{ props.options.map((option)=>{
+{options.map((option)=>{
 return <li style={{backgroundColor: option.color}}> 
     {option.label}</li>
 })
@@ -13,3 +13,7 @@ return <li style={{backgroundColor: option.color}}>
 
 
 }
+
+// ColorPicker.propTupes = {
+//   options: PropTypes.array
+//   }

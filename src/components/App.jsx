@@ -9,17 +9,19 @@ import { Alert } from "./Alert/Alert"
 import { Container } from "./Container"
 
 
+
 export const App =()=>{
     return <>
     <div>
         <Container>
-    {/* <PaintingList data = {data}/>
+     <PaintingList data = {data}/>
     <Greeting name=' Bob  ' id='5'/>
-    <Subtittle text = ''/> */}
+    <Subtittle text = ''/> 
     <ColourPicker options = {colorPickerOptions} />
     <Alert text = 'Успішне виконання' type='success'/>
     <Alert text = 'Помилка' type='error'/>
     <Alert text = 'Попередження' type='warning'/>
+
         </Container>
 
 </div>

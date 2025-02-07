@@ -1,9 +1,11 @@
 import css from './painting.modul.css' 
+import { CardList } from './PaintingList.styled'
 
 
 
 export const PaintingList = (props) => {
- return <ul className={css.list}>
+
+ return <CardList>
   {props.data.map((paintCard) => {
   return <li key={paintCard.id}>
     <img src={paintCard.url} alt={paintCard.title} width="480"/>
@@ -16,7 +18,7 @@ export const PaintingList = (props) => {
     <button type="button">Додати в кошик</button></li>
 })}
     
-  </ul>} 
+  </CardList>} 
 
 
 const title = <h1>Hello</h1>

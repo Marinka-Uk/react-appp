@@ -1,11 +1,12 @@
-import s from  './Alert.module.css'
+// import s from  './Alert.module.css'
 import PropTypes from 'prop-types';
+import {AlertStyled} from './Alert.styled'
 
 export const Alert = ({text,type})=>{
-    return <p className={s[type]}> {text}</p>
+    return <AlertStyled type={type}> {text}</AlertStyled>
 }
 
 Alert.propTypes = {
-    text : PropTypes.string,
-    type : PropTypes.string,
+    text : PropTypes.string.isRequired,
+    type : PropTypes.oneOf(['error','succes','warning']),
 }

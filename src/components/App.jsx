@@ -7,7 +7,9 @@ import { colorPickerOptions } from "colourPicker"
 import { Alert } from "./Alert/Alert"
 // import PropTypes from 'prop-types';
 import { Container } from "./Container"
-import { GlobalStyle } from "Global.styled"
+import { GlobalStyle } from "Global"
+import { Counter } from "./Counter/Counter"
+import { Header } from "./Header/Header"
 
 
 
@@ -19,11 +21,19 @@ export const App =()=>{
     <Greeting name=' Bob  ' id='5'/>
     <Subtittle text = ''/> 
     <ColourPicker options = {colorPickerOptions} /> */}
-    <Alert text = 'Успішне виконання' type='success'/>
-    <Alert text = 'Помилка' type='error'/>
-    <Alert text = 'Попередження' type='warning'/>
-<GlobalStyle/>
-        </Container>
+    {/* <Alert text = 'Успішне виконання' type='success'/> */}
+    {/* <Alert text = 'Помилка' type='error'/> */}
+    {/* <Alert text = 'Попередження' type='warning'/> */}
+
+<Counter/>
+<Header/>
+ <GlobalStyle/>
+         </Container> 
+
+
+
+
+
 
 </div>
     </>

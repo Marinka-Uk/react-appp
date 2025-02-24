@@ -1,19 +1,27 @@
+import { colorPickerOptions } from 'colourPicker';
 import css from './ColourPicker.module.css'
 import PropTypes from 'prop-types';
+import { Component } from "react";
 
-export const ColourPicker = ({options})=>{
-return <ul className={css.list}>
-{options.map((option)=>{
-return <li style={{backgroundColor: option.color}}> 
-    {option.label}</li>
-})
 
+
+
+
+export class ColorOption extends Component {
+  render(){
+    return <ul className={css.list}>
+    {this.props.options.map((option)=>{
+    return <li style={{backgroundColor: option.color}}> 
+        {option.label}</li>
+    })
+    
+    }
+      </ul>
+  }
 }
-  </ul>
+
+ ColorOption.propTypes ={
+  colorPickerOptions: PropTypes.array
+ }
 
 
-}
-
-// ColorPicker.propTupes = {
-//   options: PropTypes.array
-//   }

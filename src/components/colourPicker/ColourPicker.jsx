@@ -8,10 +8,11 @@ import { Component } from "react";
 
 
 export class ColorOption extends Component {
+  
   render(){
     return <ul className={css.list}>
     {this.props.options.map((option)=>{
-    return <li style={{backgroundColor: option.color}}> 
+    return <li onClick={()=>{this.props.chooseLabel(option.label)}} style={{backgroundColor: option.color}}> 
         {option.label}</li>
     })
     

@@ -13,6 +13,7 @@ import { Dropdown } from './Dropdown/Dropdown';
 import { ColorOption } from './colourPicker/ColourPicker';
 import { colorPickerOptions } from 'colourPicker';
 import { Label } from './Label/Label';
+import { Form } from './Form/Form';
 
 export class App extends Component {
   state = {
@@ -21,6 +22,9 @@ export class App extends Component {
   chooseLabel = currentLabel => {
     this.setState({ label: currentLabel });
   };
+
+
+
 
   render() {
     return (
@@ -43,6 +47,7 @@ export class App extends Component {
             {/* <Dropdown/> */}
             {/* <GlobalStyle/> */}
             <Label label={this.state.label} />
+            <Form  />
           </Container>
         </div>
       </>

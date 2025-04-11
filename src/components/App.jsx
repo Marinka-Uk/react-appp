@@ -13,7 +13,9 @@ import { Dropdown } from './Dropdown/Dropdown';
 import { ColorOption } from './colourPicker/ColourPicker';
 import { colorPickerOptions } from 'colourPicker';
 import { Label } from './Label/Label';
-import { Form } from './Form/Form';
+// import { Form } from './Form/Form';
+import {Form} from '../Pokemon/Form'
+import { PokemonInfo } from 'Pokemon/PokemonInfo';
 
 export class App extends Component {
   state = {
@@ -34,10 +36,10 @@ export class App extends Component {
             {/* <PaintingList data = {data}/> */}
             {/* <Greeting name=' Bob  ' id='5'/> */}
             {/* <Subtittle text = ''/>  */}
-            <ColorOption
+            {/* <ColorOption
               options={colorPickerOptions}
               chooseLabel={this.chooseLabel}
-            />
+            /> */}
             {/* <Alert text = 'Успішне виконання' type='success'/> */}
             {/* <Alert text = 'Помилка' type='error'/>  */}
             {/* <Alert text = 'Попередження' type='warning'/> */}
@@ -46,8 +48,12 @@ export class App extends Component {
             {/* <Header/> */}
             {/* <Dropdown/> */}
             {/* <GlobalStyle/> */}
-            <Label label={this.state.label} />
+            {/* <Label label={this.state.label} /> */}
             <Form  />
+            <PokemonInfo/>
+
+
+
           </Container>
         </div>
       </>

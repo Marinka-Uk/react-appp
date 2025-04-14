@@ -20,10 +20,17 @@ import { PokemonInfo } from 'Pokemon/PokemonInfo';
 export class App extends Component {
   state = {
     label: '',
+    pokemonName:'',
   };
-  chooseLabel = currentLabel => {
-    this.setState({ label: currentLabel });
-  };
+
+
+onName = (name)=>{
+  this.setState({pokemonName: name })
+}
+
+  // chooseLabel = currentLabel => {
+  //   this.setState({ label: currentLabel });
+  // };
 
 
 
@@ -33,6 +40,7 @@ export class App extends Component {
       <>
         <div>
           <Container>
+
             {/* <PaintingList data = {data}/> */}
             {/* <Greeting name=' Bob  ' id='5'/> */}
             {/* <Subtittle text = ''/>  */}
@@ -49,8 +57,8 @@ export class App extends Component {
             {/* <Dropdown/> */}
             {/* <GlobalStyle/> */}
             {/* <Label label={this.state.label} /> */}
-            <Form  />
-            <PokemonInfo/>
+            <Form onChange={this.onName} />
+            <PokemonInfo pokemonName={this.state.pokemonName}/>
 
 
 

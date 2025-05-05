@@ -13,9 +13,10 @@ import { Dropdown } from './Dropdown/Dropdown';
 import { ColorOption } from './colourPicker/ColourPicker';
 import { colorPickerOptions } from 'colourPicker';
 import { Label } from './Label/Label';
-// import { Form } from './Form/Form';
-import {Form} from '../Pokemon/Form'
-import { PokemonInfo } from 'Pokemon/PokemonInfo';
+import { Form } from './Form/Form';
+// import {Form} from '../Pokemon/Form'
+// import { PokemonInfo } from 'Pokemon/PokemonInfo';
+import {Timer} from './Timer/Timer'
 
 export class App extends Component {
   state = {
@@ -41,6 +42,12 @@ onName = (name)=>{
         <div>
           <Container>
 
+            <button onClick={
+              ()=>{this.state((prevState)=>({timerState: !prevState.timerState}))}
+            }>Показати таймер
+            </button>
+            {this.state.timerState &&   <Timer /> }
+
             {/* <PaintingList data = {data}/> */}
             {/* <Greeting name=' Bob  ' id='5'/> */}
             {/* <Subtittle text = ''/>  */}
@@ -57,8 +64,10 @@ onName = (name)=>{
             {/* <Dropdown/> */}
             {/* <GlobalStyle/> */}
             {/* <Label label={this.state.label} /> */}
-            <Form onChange={this.onName} />
-            <PokemonInfo pokemonName={this.state.pokemonName}/>
+            {/* <Form onChange={this.onName} /> */}
+            {/* <PokemonInfo pokemonName={this.state.pokemonName}/> */}
+        
+        
 
 
 

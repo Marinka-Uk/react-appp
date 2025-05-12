@@ -17,6 +17,7 @@ import { Form } from './Form/Form';
 // import {Form} from '../Pokemon/Form'
 // import { PokemonInfo } from 'Pokemon/PokemonInfo';
 import {Timer} from './Timer/Timer'
+import {complexCompute} from './Counter/Counter'
 
 export class App extends Component {
   state = {
@@ -59,7 +60,7 @@ onName = (name)=>{
             {/* <Alert text = 'Помилка' type='error'/>  */}
             {/* <Alert text = 'Попередження' type='warning'/> */}
 
-            {/* <Counter/> */}
+            <Counter/>
             {/* <Header/> */}
             {/* <Dropdown/> */}
             {/* <GlobalStyle/> */}

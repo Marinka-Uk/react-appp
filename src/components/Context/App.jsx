@@ -1,17 +1,16 @@
 import React, { useState, useContext } from 'react';
 import { Message } from './Message';
 import { Button } from './Button';
+import { Context } from './Context';
 
-export const Context = React.createContext();
-
-export const  App=()=> {
-  const [showMessage, setShowMessage] = useState(false);
+export const App = () => {
   return (
     <>
-      <Context.Provider value={{ showMessage, setShowMessage}}>
+      <Context>
+        
         <Button />
         <Message />
-      </Context.Provider>
+      </Context>
     </>
   );
-}
+};

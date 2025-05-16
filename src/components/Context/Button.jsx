@@ -1,9 +1,10 @@
 import React from 'react';
 import { useContext } from 'react';
 import { Context } from './App';
+import { useFirst } from './Context';
 
 export const Button = () => {
-  const cba = useContext(Context);
+  const cba = useFirst();
   return (
     <button
       onClick={() => {

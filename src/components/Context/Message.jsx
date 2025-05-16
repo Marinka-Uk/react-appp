@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import  { Context } from './App'
+import  { ContextMessage, useFirst } from './App'
 
 export const Message = () => {
-    const abc = useContext(Context)
+    const abc = useFirst()
 
     return <>
     {abc.show && <p>Message</p>}
